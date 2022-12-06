@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    position: relative;
+}
+
+body{
+    font-family: sans-serif;
+    color: #222;
+}
+
+#principal{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#container{
+    width: 60vw;
+    height: 90vh;
+    margin: 50px;
+    margin-left: 18vw;
+    box-shadow: 0px 0px 10px 6px #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    display: grid;
+    grid-gap: 5px
+}
+
+.box{
+    box-shadow: 2px 2px 2px #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.box img{
+    width: 35px;
+}
+
+#warning, #win-alert, #dif-selector {
+    width: 80vw;
+    height: 40vh;
+    margin: 0px auto;
+    box-shadow: 0px 0px 10px 6px #ccc;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#warning p, #win-alert p, #dif-selector p{
+    color: red;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#win-alert p{
+    color: rgb(95, 235, 97);
+}
+
+#dif-selector p {
+    color: #aaa;
+}
+
+#warning .reload, #win-alert .reload, #dif-selector button {
+    margin: 30px;
+    padding: 12px 24px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 3px #ccc;
+    border: none;
+    border-radius: 4px;
+    color: #aaa;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#warning .reload:hover, #win-alert .reload:hover, #dif-selector button:hover{
+    background-color: #eee;
+    color: #999;
+}
+
+#warning .reload:active, #win-alert .reload:active, #dif-selector button:active{
+    background-color: #fff;
+}
+
+#capa{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#sidebar{
+    margin: 50px 20px;
+    padding-top: 20px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#clock{
+    display: inline-flex;
+    justify-content: center;
+    background: linear-gradient(#eee, #bbb);
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 6px 30px;
+}
+
+#clock .time{
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#flag{
+    border: 2px solid #ddd;
+    background: linear-gradient(#eee, #bbb);
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#flag img{
+    width: 90%;
+}
+
+#start, #pause{
+    margin-top: 100px;
+    padding: 20px 40px;
+    background: linear-gradient(#eee, #bbb);
+    border: 2px solid #ddd;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#start:hover, #pause:hover {
+    background: linear-gradient(#ddd, #aaa);
+}
+
+#start:active, #pause:active{
+    background: linear-gradient(#eee, #bbb);
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    from {
+        background-color: red;
+    } to{
+        background-color: #fff;
+    }
+}
+
+@keyframes warning-appear{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    } to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes capa-appear{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    } to{
+        visibility: visible;
+        opacity: 0.8;
+    }
+}
+
+@keyframes reload {
+    from{
+        opacity: 1;
+    } to{
+        opacity: 0;
+    }
+}

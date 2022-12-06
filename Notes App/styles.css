@@ -1,0 +1,233 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #222;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(139,156,255,1) 0%, rgba(142,187,251,1) 100%);
+    position: relative;
+}
+
+.cards{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc((100vw - 4rem) / 4 - 4.35rem);
+    height: 20rem;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: .25rem .25rem 1rem .25rem rgba(0,0,0,.35);
+}
+
+.add-note{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-note .add-btn{
+    width: 7rem;
+    height: 7rem;
+    border: .15rem dashed rgba(139,156,255,1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.add-btn p{
+    font-size: 2.75rem;
+    color: rgba(139,156,255,1);
+}
+
+.add-note > p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(139,156,255,1)
+}
+
+.new-note{
+    padding: 2rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new-note .content{
+    height: 13.75rem;
+    border-bottom: 1px solid #666;
+}
+
+.content h3{
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+}
+
+.content p{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.new-note .footer{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p{
+    color: #444;
+}
+
+.footer .menu{
+    position: relative;
+}
+
+.menu img{
+    width: 1.75rem;
+    line-height: 2.25rem;
+    cursor: pointer;
+}
+
+.menu ul{
+    padding: .75rem;
+    background-color: #fff;
+    list-style: none;
+    border-radius: .25rem;
+    box-shadow: .25rem .25rem 1rem .25rem rgba(0,0,0,.5);
+    position: absolute;
+    top: -.25rem;
+    right: -.25rem;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .3s ease;
+}
+
+.menu .active{
+    transform: scale(1);
+}
+
+.menu li{
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu li:last-child{
+    margin-bottom: 0;
+}
+
+.menu .menu-li-clicker {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.menu .menu-li-clicker:hover{
+    background-color: rgba(150, 150, 150, .1);
+}
+
+.add-new-note-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .15);
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+}
+
+.add-new-note-container.active{
+    transform: scale(1);
+}
+
+.add-new-note-panel{
+    width: 25rem;
+    height: 30rem;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: .25rem .25rem 1rem .25rem rgba(0,0,0,.35);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: scale(0);
+    transition: transform .3s ease;
+}
+
+.add-new-note-panel.active{
+    transform: scale(1);
+}
+
+.add-new-note-panel h3{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.add-new-note-panel img{
+    width: 1.5rem;
+    opacity: .5;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+
+.add-new-note-panel .note-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.note-form > * {
+    margin-bottom: .75rem;
+}
+
+.note-form input,
+.note-form textarea{
+    padding: .75rem;
+    padding-left: 1.15rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    font-size: 1rem;
+    color: #666;
+    outline: none;
+}
+
+.note-form textarea{
+    height: 8rem;
+    margin-bottom: 2.5rem;
+    resize: none;
+}
+
+.note-form input[type="submit"]{
+    background-color: rgba(139,156,255,1);
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.note-form input[type="submit"]:hover{
+    background-color: rgba(139,156,255,.9);
+}

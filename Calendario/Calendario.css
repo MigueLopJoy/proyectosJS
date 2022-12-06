@@ -1,0 +1,116 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9B59B6;
+}
+
+.wrapper{
+  width: 450px;
+  padding: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0, 0, 0, 0, rgba(0, 0, 0, 0.2);
+}
+
+.header{
+  width: 100%;
+  padding: .75rem;
+  padding-right: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.icons span {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icons span:hover{
+  background-color: #ccc;
+}
+
+.icons span:last-child {
+  text-align: right;
+}
+
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar li {
+  width: calc(100% / 7);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.days {
+  margin-bottom: .25rem;
+  font-weight: 600;
+}
+
+.dates li {
+  position: relative;
+  z-index: 1;
+}
+
+.dates li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dates li:hover::before {
+  background-color: #ccc;
+}
+
+.dates li.today::before {
+  background-color: #896895;
+}
+
+.inactive {
+  color: #bbb;
+}
+
+.today{
+  color: #fff;
+}

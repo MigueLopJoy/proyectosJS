@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Blaka+Ink&family=Ms+Madi&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100&family=Sen&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card add-note">
+            <div class="add-btn">
+                <p>+</p>
+            </div>
+            <p>Add a new note</p>
+        </div>
+    </div>
+
+    <div class="add-new-note-container">
+        <div class="add-new-note-panel">
+            <h3>Add a new Note</h3>
+            <img src="close.png">
+            <form class="note-form">
+                <label for="new-note-title">Title</label>
+                <input type="text" id="new-note-title" name="new-note-title">
+                <label for="new-note-description">Description</label>
+                <textarea name="new-note-description" id="new-note-description" name="new-note-description"></textarea>
+                <input type="submit" id="send-new-note" value="Add Note">
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

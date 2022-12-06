@@ -1,0 +1,140 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #555;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body{
+    min-height: 100vh;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 50%, #ffffff 100%);
+}
+
+.wrapper {
+    width: 27.5rem;
+    margin: 10rem auto;
+    padding: 1.5rem;
+}
+
+.display-menu-btn {
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .25rem .75rem .2rem rgba(0, 0, 0, .35);
+    cursor: pointer;
+    position: relative;
+}
+
+.display-menu-btn p{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.display-menu-btn span {
+    font-size: 1.95rem;
+    transform: rotateZ(180deg);
+    transition: transform .2s linear;
+}
+
+.clicker{
+    width: 392px;
+    height: 63.2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.wrapper.active .display-menu-btn span {
+    transform: rotateZ(0deg);
+}
+
+.menu-box {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .25rem .75rem .2rem rgba(0, 0, 0, .35);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .2s linear;
+}
+
+.wrapper.active .menu-box{
+    transform: scaleY(1);
+}
+
+.search-input {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input span {
+    position: absolute;
+    color: #aaa;
+    font-size: 1.75rem;
+    font-weight: 500;
+    top: .6rem;
+    left: 1rem;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.search-input input {
+    width: 100%;
+    padding: .5rem;
+    padding-left: 3.25rem;
+    border: 2px solid #ccc;
+    border-radius: .5rem;
+    outline: none;
+}
+
+.search-input input::placeholder {
+    color: #aaa;
+}
+
+.countries-list-box {
+    max-height: 15rem;
+    overflow-y: auto;
+    position: relative;
+}
+
+.countries-list li {
+    margin-left: .25rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.countries-list li.selected {
+    background-color: #ddd;
+}
+
+.countries-list li:hover {
+    background-color: #ddd;
+}
